@@ -1,0 +1,18 @@
+syntax = "proto3";
+package reelforge;
+service ReelForge {
+    rpc StartEncode(EncodeConfig) returns (JobResponse);
+    rpc StopEncode(JobRequest) returns (JobResponse);
+    rpc StartDecode(DecodeConfig) returns (JobResponse);
+    rpc StopDecode(JobRequest) returns (JobResponse);
+    rpc GetStatus(StatusRequest) returns (StatusResponse);
+    rpc HealthCheck(HealthRequest) returns (HealthResponse);
+}
+message EncodeConfig { uint32 codec=1; uint32 width=2; uint32 height=3; uint32 bitrate=4; uint32 fps=5; }
+message DecodeConfig { uint32 codec=1; uint32 width=2; uint32 height=3; }
+message JobRequest { string job_id=1; }
+message JobResponse { bool success=1; string job_id=2; string error=3; }
+message StatusRequest {}
+message StatusResponse { uint32 active_jobs=1; uint64 bytes_processed=2; }
+message HealthRequest {}
+message HealthResponse { string status=1; string version=2; }
