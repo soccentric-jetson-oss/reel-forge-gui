@@ -8,6 +8,34 @@ The Reel Forge GUI is a cross-platform PySide6 desktop application for controlli
 - PySide6
 - desktop
 - application
+- Hardware
+- encode
+- start/stop
+- controls
+- Hardware
+- decode
+- start/stop
+- controls
+- Real-time
+- job
+- status
+- monitoring
+- Active
+- job
+- count
+- display
+- Bytes
+- processed
+- tracking
+- gRPC
+- client
+- with
+- auto-reconnect
+- Periodic
+- status
+- refresh
+- MIT
+- licensed
 
 ## Quick Start
 
@@ -20,16 +48,6 @@ The Reel Forge GUI is a cross-platform PySide6 desktop application for controlli
 make all      # Build all targets
 make test     # Run tests
 make clean    # Clean build artifacts
-```
-
-## Architecture
-
-```
-Driver (kernel module) ──► Server (gRPC) ──► GUI (PySide6)
-     │                        │                    │
-     ▼                        ▼                    ▼
-  Hardware              C++ Service           Desktop App
-  Access                Layer                 (macOS/Linux/Win)
 ```
 
 ## Repository Structure
@@ -47,10 +65,10 @@ Driver (kernel module) ──► Server (gRPC) ──► GUI (PySide6)
 ## Project Status
 
 **Version:** 0.1.0 — Initial release
-**License:** Hardware encode start/stop controls
+**License:** MIT
 **Audit Score:** 90/100
 
-## 🌐 Ecosystem
+## Ecosystem
 
 This project is part of the [Jetson AGX Orin Capability Showcase](https://github.com/soccentric-jetson-oss/soccentric-jetson-oss) — five open-source projects demonstrating full exploitation of NVIDIA's flagship edge AI platform.
 
@@ -60,4 +78,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. All contributions welcome
 
 ## License
 
-Hardware encode start/stop controls. See [LICENSE](LICENSE) for details.
+MIT. See [LICENSE](LICENSE) for details.
