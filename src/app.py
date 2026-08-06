@@ -47,7 +47,7 @@ class ReelForgeApp(QMainWindow):
 
         # Status display
         self.status_label = QLabel("Status: Idle")
-        self.status_label.setStyleSheet("color:#888;")
+        self.status_label.setStyleSheet("color:#616161;")
         layout.addWidget(self.status_label)
         layout.addStretch()
 
